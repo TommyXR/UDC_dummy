@@ -1,0 +1,1 @@
+julia --project src/datafeed.jl $1
