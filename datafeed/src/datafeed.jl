@@ -190,9 +190,11 @@ if !isinteractive()
 
     port = parse(Int, first(ARGS))
 
+    host = haskey(ENV, "HOST") ? ENV["HOST"], Sockets.localhost
+
     @info "Starting serving on port $port."
 
-    HTTP.serve(ROUTER, Sockets.localhost, port)
+    HTTP.serve(ROUTER, host, port)
 
 end
 
