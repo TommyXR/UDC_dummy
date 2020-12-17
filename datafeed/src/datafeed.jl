@@ -190,7 +190,7 @@ if !isinteractive()
 
     port = parse(Int, first(ARGS))
 
-    host = haskey(ENV, "HOST") ? ENV["HOST"], Sockets.localhost
+    host = haskey(ENV, "HOST") ? ENV["HOST"] : Sockets.localhost
 
     @info "Starting serving on port $port."
 
