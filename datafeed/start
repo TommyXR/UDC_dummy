@@ -1,2 +1,2 @@
-docker run -it --rm -p8081:8081 test_jl
+docker run -it --rm -p8081:8081 udc_dummy
 
